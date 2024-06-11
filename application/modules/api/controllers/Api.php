@@ -30,7 +30,7 @@ class Api extends REST_Controller {
 
 		$err = '';
 		if(!$post['id_machine']) $err .= ' Id Machine,';
-		if(!$post['status']) $err .= ' Status,';
+		if($post['status'] != null) $err .= ' Status,';
 		if($err != ''){
 			$err .= 'Not Found.';
 			$mess = [
